@@ -1,0 +1,12 @@
+# ADB-Fastboot PATH
+if [ -d "$HOME/Clones/platform-tools" ] ; then
+	export PATH="$HOME/Clones/platform-tools:$PATH"
+fi
+
+# Heimdall Download-mode PATH
+if [ -d "$HOME/Clones/heimdall" ] ; then
+	export PATH="$HOME/Clones/heimdall:$PATH"
+fi
+
+# QT Theming
+export QT_QPA_PLATFORMTHEME=qt5ct
