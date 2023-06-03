@@ -7,7 +7,8 @@ xscreensaver --no-splash &
 nitrogen --restore &
 
 dunst &
-pcmanfm -d &
 /usr/lib/kdeconnectd &
 kdeconnect-indicator &
+
+#pcmanfm -d &
 #pnmixer &

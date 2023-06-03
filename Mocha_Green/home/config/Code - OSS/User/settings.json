@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "catppuccin.accentColor": "green",
+    "editor.minimap.autohide": true,
+    "editor.fontSize": 13,
+    "editor.renderWhitespace": "all",
+    "editor.fontFamily": "'Hack Nerd Font Mono', 'monospace', monospace",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "zenMode.hideStatusBar": false,
+    "telemetry.telemetryLevel": "off",
+    "git.openRepositoryInParentFolders": "never"
+}

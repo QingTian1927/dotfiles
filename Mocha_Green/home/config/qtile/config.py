@@ -25,8 +25,7 @@
 # SOFTWARE.
 
 
-# --------- #
-# LIBRARIES #
+# --------- # LIBRARIES #
 # --------- #
 
 import os
@@ -42,7 +41,7 @@ from libqtile.utils import guess_terminal
 # ------------ #
 
 terminal = guess_terminal()
-file_manager = "pcmanfm"
+file_manager = "nemo"
 web_browser = "librewolf"
 music_player = "rhythmbox"
 
@@ -211,7 +210,7 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
     ]
 )
-auto_fullscreen = False
+auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
 

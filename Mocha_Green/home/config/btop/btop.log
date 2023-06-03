@@ -48,3 +48,33 @@ theme[process_start]=
 
 # Process box color gradient for threads, mem and cpu usage (Sapphire -> Mauve)
 theme[process_start]=
+
+2023/05/31 (17:52:52) | ===> btop++ v.1.2.13
+2023/05/31 (17:52:52) | ERROR: Invalid hex value: 89dceb
+
+# Process box color gradient for threads, mem and cpu usage (Sapphire -> Mauve)
+theme[process_start]=
+
+2023/05/31 (17:57:10) | ===> btop++ v.1.2.13
+2023/05/31 (17:57:10) | ERROR: Invalid hex value: 89dceb
+
+# Process box color gradient for threads, mem and cpu usage (Sapphire -> Mauve)
+theme[process_start]=
+
+2023/06/02 (13:41:44) | ===> btop++ v.1.2.13
+2023/06/02 (13:41:44) | ERROR: Invalid hex value: 89dceb
+
+# Process box color gradient for threads, mem and cpu usage (Sapphire -> Mauve)
+theme[process_start]=
+
+2023/06/02 (21:58:10) | ===> btop++ v.1.2.13
+2023/06/02 (21:58:10) | ERROR: Invalid hex value: 89dceb
+
+# Process box color gradient for threads, mem and cpu usage (Sapphire -> Mauve)
+theme[process_start]=
+
+2023/06/03 (16:23:10) | ===> btop++ v.1.2.13
+2023/06/03 (16:23:10) | ERROR: Invalid hex value: 89dceb
+
+# Process box color gradient for threads, mem and cpu usage (Sapphire -> Mauve)
+theme[process_start]=
