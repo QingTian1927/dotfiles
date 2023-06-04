@@ -45,6 +45,7 @@ file_manager = "nemo"
 web_browser = "librewolf"
 music_player = "rhythmbox"
 
+
 # ----------- #
 # KEYBINDINGS #
 # ----------- #
@@ -102,6 +103,8 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl -q s 5%+"), desc="Raise monitor brightness"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl -q s 5%-"), desc="Lower monitor brightness"),
 
+    # Screen Capture
+    Key([], "Print", lazy.spawn("gnome-screenshot -i"), desc="Lower monitor brightness"),
 
     # --------- #
     # LAUNCHERS #
@@ -140,10 +143,10 @@ for i in groups:
         ]
     )
 
-@hook.subscribe.startup_once
-def autostart():
-    home = os.path.expanduser('~/.config/autostart/autostart.sh')
-    subprocess.Popen([home])
+#@hook.subscribe.startup_once
+#def autostart():
+#    home = os.path.expanduser('~/.config/autostart/autostart.sh')
+#    subprocess.Popen([home])
 
 
 def init_layout_theme():

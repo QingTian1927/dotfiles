@@ -10,3 +10,27 @@ fi
 
 # QT Theming
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+# Polybar Colors
+PL_BACKGROUND="#1e1e2e"
+PL_OVERLAY="#585b70"
+PL_TEXT="#cdd6f4"
+PL_PRIMARY="#a6e3a1"    # green
+PL_SECONDARY="#94e2d5"  # teal
+PL_CAUTION="#fab387"    # orange
+PL_ALERT="#f38ba8"      # red
+PL_DISABLED="#7f849c"
+
+export BAR_WIFI_ON="%{F$PL_PRIMARY}WIFI%{F-} %{F$PL_SECONDARY}%{F-}"
+export BAR_WIFI_OFF="%{F$PL_PRIMARY}WIFI%{F-} %{F$PL_CAUTION}%{F-}"
+
+export BAR_ETH_ON="%{F$PL_PRIMARY}ETH%{F-} %{F$PL_SECONDARY}%{F-}"
+export BAR_ETH_OFF="%{F$PL_PRIMARY}ETH%{F-} %{F$PL_CAUTION}%{F-}"
+
+export BAR_BAT_CHARGE="%{F$PL_PRIMARY}BAT%{F-} %{F$PL_SECONDARY}%percentage% %{F-}"
+export BAR_BAT_DISCHARGE="%{F$PL_PRIMARY}BAT%{F-} %percentage%"
+export BAR_BAT_FULL="%{F$PL_PRIMARY}BAT%{F-} %{F$PL_ALERT}%percentage% %{F-}"
+export BAR_BAT_LOW="%{F$PL_PRIMARY}BAT%{F-} %{F$PL_CAUTION}%percentage% %{F-}"
+
+export BAR_BRIGHTNESS="%{F$PL_PRIMARY}LIT%{F-} %output%"
+export BAR_MPRIS="%{F$PL_PRIMARY}%output%%{F-}"
