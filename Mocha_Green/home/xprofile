@@ -9,6 +9,7 @@ nitrogen --restore &
 dunst &
 /usr/lib/kdeconnectd &
 kdeconnect-indicator &
+ibus-daemon -rxR &
 
 #pcmanfm -d &
 #pnmixer &

@@ -25,13 +25,16 @@
 # SOFTWARE.
 
 
-# --------- # LIBRARIES #
+# --------- #
+# LIBRARIES #
 # --------- #
 
-import os
-import subprocess
+#import os
+#import subprocess
+from os.path import expanduser
 
-from libqtile import bar, layout, widget, hook
+#from libqtile import bar, layout, widget, hook
+from libqtile import layout
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -40,11 +43,20 @@ from libqtile.utils import guess_terminal
 # APPLICATIONS #
 # ------------ #
 
+HOME_DIR = expanduser("~")
+
 terminal = guess_terminal()
 file_manager = "nemo"
 web_browser = "librewolf"
 music_player = "rhythmbox"
+screenshot = f"{HOME_DIR}/.config/qtile/scripts/screenshot.sh -s"
 
+volume_mute = f"{HOME_DIR}/.config/qtile/scripts/volume.sh -m"
+volume_lower = f"{HOME_DIR}/.config/qtile/scripts/volume.sh -l"
+volume_raise = f"{HOME_DIR}/.config/qtile/scripts/volume.sh -r"
+
+brightness_lower = "brightnessctl -q s 5%-"
+brightness_raise = "brightnessctl -q s 5%+"
 
 # ----------- #
 # KEYBINDINGS #
@@ -87,7 +99,8 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "control"], "r", lazy.reload_config(), lazy.spawn("~/.config/polybar/launch.sh"), desc="Reload the config"),
+    #lazy.spawn(f"{HOME_DIR}/.config/polybar/launch.sh"),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
 
     # ----------- #
@@ -95,16 +108,16 @@ keys = [
     # ----------- #
 
     # Audio
-    Key([], "XF86AudioMute", lazy.spawn("pulsemixer --toggle-mute"), desc="Mute the audio"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pulsemixer --change-volume -5"), desc="Lower the volume"),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pulsemixer --change-volume +5"), desc="Raise the volume"),
+    Key([], "XF86AudioMute", lazy.spawn(volume_mute), desc="Mute the audio"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn(volume_lower), desc="Lower the volume"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn(volume_raise), desc="Raise the volume"),
 
     # Screen Brightness
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl -q s 5%+"), desc="Raise monitor brightness"),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl -q s 5%-"), desc="Lower monitor brightness"),
+    Key([], "XF86MonBrightnessUp", lazy.spawn(brightness_raise), desc="Raise monitor brightness"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn(brightness_lower), desc="Lower monitor brightness"),
 
     # Screen Capture
-    Key([], "Print", lazy.spawn("gnome-screenshot -i"), desc="Lower monitor brightness"),
+    Key([], "Print", lazy.spawn(screenshot), desc="Shoot the screen"),
 
     # --------- #
     # LAUNCHERS #
