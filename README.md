@@ -1,10 +1,14 @@
 # Mocha Green
-A dark catppuccin rice with bright neon green accent color, designed with both looks and usability in mind. 
-
-This config also try to be as minimalist as possibile, without sacrificing too much on functionality.
+A dark catppuccin rice with bright neon green accent color, designed mainly for functionality and usability in mind. 
 
 ## Screenshots
-insert images here
+![desktop screenshot](assets/screenshot_1 "Desktop")
+
+![neofetch screenshot](assets/screenshot_2 "Neofetch")
+
+![some applications screenshot](assets/screenshot_3 "Code, Librewolf & Nemo")
+
+![some neovim screenshot](assets/screenshot_4 "Neovim")
 
 ## Features
 ### Desktop Environment (X11)
