@@ -1,0 +1,32 @@
+import = [
+    "~/.config/alacritty/themes/gnome_terminal.toml"
+#    "~/.config/alacritty/themes/tomorrow_night.toml"
+]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "Hasklug Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "Hasklug Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hasklug Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hasklug Nerd Font Mono"
+style = "Italic"
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
