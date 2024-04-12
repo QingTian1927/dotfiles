@@ -25,7 +25,7 @@ return {
     main = "ibl",
     dependencies = "HiPhish/rainbow-delimiters.nvim",
 
-    event = { "BufEnter" },
+    event = { "BufReadPre" },
 
     config = function()
       local highlight = {
@@ -92,4 +92,6 @@ return {
     event = "VeryLazy",
     opts = {}
   },
+
+  { "HiPhish/rainbow-delimiters.nvim" },
 }

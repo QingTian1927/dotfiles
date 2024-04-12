@@ -54,6 +54,7 @@ return {
         markdown = { "proselint" },
         text = { "proselint" },
         tex = { "proselint" },
+        plaintex = { "proselint" },
         sh = { "shellcheck" },
       }
 
