@@ -98,6 +98,7 @@ alias fucking='sudo'
 # alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 # alias libvirtd='sudo systemctl start libvirtd.service'
 
+alias fetch='fastfetch'
 alias rm='trash -v'
 eval $(thefuck --alias)
 
