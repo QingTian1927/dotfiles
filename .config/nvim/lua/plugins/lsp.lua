@@ -19,6 +19,15 @@ return {
         function(server_name)
           require("lspconfig")[server_name].setup({})
         end,
+
+        ["clangd"] = function()
+          require("lspconfig").clangd.setup({
+            cmd = {
+              "clangd",
+              "--offset-encoding=utf-16",
+            },
+          })
+        end,
       })
     end,
   },

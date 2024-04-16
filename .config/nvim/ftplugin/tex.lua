@@ -3,14 +3,22 @@ local snippets = require("snippets.tex")
 local map = vim.keymap.set
 local fn = vim.fn
 
-local open_pdf = "<CMD>!xdg-open " .. fn.expand("%:t:r") .. ".pdf &<CR>"
-local build_latex = "<CMD>TexlabBuild<CR>"
+local build_latex = "<CMD>TexlabBuild"
+local open_pdf = "<CMD>!xdg-open " .. fn.expand("%:p:t:r") .. ".pdf"
 
-map("n", "<localleader>c", build_latex, { desc = "Build LaTeX Document" })
-map("n", "<localleader>o", open_pdf, { desc = "Open Compiled LaTeX Document" })
-map("n", "<localleader>p", build_latex .. open_pdf,
-    { desc = "Build Then Open Compiled LaTeX Document" }
-)
+map("n", "<localleader>c", function()
+    return build_latex .. "<CR>"
+end, { expr = true, desc = "Build LaTeX Document" })
+
+map("n", "<localleader>o", function()
+    return open_pdf .. " &<CR>"
+end, { expr = true, desc = "Open Compiled LaTeX Document" })
+
+-- The first command is too slow for the second, so the pdf file doesn't get
+-- updated on time. Might retry this keymap later.
+-- map("n", "<localleader>p", function()
+--     return build_latex .. "<CR> ^V| " .. open_pdf .. " &<CR>"
+-- end, { expr = true, desc = "Build Then Open Compiled LaTeX Document" })
 
 map("n", "<localleader>b", "i\\textbf{bold}<ESC>Fb", { desc = "Insert Bold Text in Normal Mode" })
 map("i", "<C-b>", "\\textbf{}<ESC>i", { desc = "Insert Bold Text in Insert Mode"})
