@@ -5,7 +5,12 @@ return {
 
     opts = {
       keys = {
-          ["<"] = { escape = false, close = true, pair = "<>" },
+        ["<"] = {
+          escape = false,
+          close = true,
+          pair = "<>",
+          enabled_filetypes = { "lua", "html" },
+        },
       }
     },
   },
@@ -47,12 +52,12 @@ return {
 
     keys = {
       { "sa", mode = { "n", "v" }, desc = "Add surrounding" },
-      { "sd", mode = "n", desc = "Delete surrounding" },
-      { "sr", mode = "n", desc = "Replace surrounding" },
-      { "sf", mode = "n", desc = "Find surrounding on the right" },
-      { "sF", mode = "n", desc = "Find surrounding on the left" },
-      { "sh", mode = "n", desc = "Highlight surrounding" },
-      { "sn", mode = "n", desc = "Update MiniSurround n_lines" },
+      { "sd", mode = "n",          desc = "Delete surrounding" },
+      { "sr", mode = "n",          desc = "Replace surrounding" },
+      { "sf", mode = "n",          desc = "Find surrounding on the right" },
+      { "sF", mode = "n",          desc = "Find surrounding on the left" },
+      { "sh", mode = "n",          desc = "Highlight surrounding" },
+      { "sn", mode = "n",          desc = "Update MiniSurround n_lines" },
     },
 
     config = true,
@@ -78,7 +83,7 @@ return {
     dependencies = "JoosepAlviste/nvim-ts-context-commentstring",
 
     keys = {
-      { "gc", mode = { "n", "v" }, desc = "Toggle comment" },
+      { "gc",  mode = { "n", "v" },                    desc = "Toggle comment" },
       { "gcc", desc = "Toggle comment on current line" },
     },
 
@@ -124,26 +129,27 @@ return {
 
     cmd = "Telescope",
     keys = {
-      { "<leader>ff", "<CMD>Telescope find_files<CR>", desc = "Telescope Find Files" },
-      { "<leader>fg", "<CMD>Telescope live_grep<CR>", desc = "Telescope Live Grep" },
-      { "<leader>fb", "<CMD>Telescope buffers<CR>", desc = "Telescope Buffers" },
-      { "<leader>fh", "<CMD>Telescope help_tags<CR>", desc = "Telescope Help Tags" },
-      { "<leader>fo", "<CMD>Telescope oldfiles<CR>", desc = "Telescope Recent Files" },
-      { "<leader>km", "<CMD>Telescope keymaps<CR>", desc = "Telescope Keymaps" },
-      { "<leader>fm", "<CMD>Telescope marks<CR>", desc = "Telescope Marks" },
-      { "<A-f>", "<CMD>Telescope current_buffer_fuzzy_find<CR>", desc = "Telescope Current Buffer" },
+      { "<leader>ff", "<CMD>Telescope find_files<CR>",                desc = "Telescope Find Files" },
+      { "<leader>fg", "<CMD>Telescope live_grep<CR>",                 desc = "Telescope Live Grep" },
+      { "<leader>fb", "<CMD>Telescope buffers<CR>",                   desc = "Telescope Buffers" },
+      { "<leader>fh", "<CMD>Telescope help_tags<CR>",                 desc = "Telescope Help Tags" },
+      { "<leader>fo", "<CMD>Telescope oldfiles<CR>",                  desc = "Telescope Recent Files" },
+      { "<leader>km", "<CMD>Telescope keymaps<CR>",                   desc = "Telescope Keymaps" },
+      { "<leader>fm", "<CMD>Telescope marks<CR>",                     desc = "Telescope Marks" },
+      { "<A-f>",      "<CMD>Telescope current_buffer_fuzzy_find<CR>", desc = "Telescope Current Buffer" },
     },
   },
 
   {
     "sudormrfbin/cheatsheet.nvim",
-    cmd = "Cheatsheet",
-
     dependencies = {
       "nvim-telescope/telescope.nvim",
       "nvim-lua/popup.nvim",
       "nvim-lua/plenary.nvim"
-    }
+    },
+
+    cmd = "Cheatsheet",
+    keys = { "<leader>ch", "<CMD>Cheatsheet<CR>", desc = "Open Cheatsheet" },
   },
 
   {
