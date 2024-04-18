@@ -20,6 +20,7 @@ return {
           "python",
           "lua",
           "c",
+          "elixir",
           "java",
         },
 
