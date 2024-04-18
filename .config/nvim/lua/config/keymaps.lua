@@ -7,17 +7,25 @@ vim.g.maplocalleader = "\\"
 ----------------------- NEOVIM KEYMAPPING ------------------------
 
 map("n", "<leader>q", "<CMD>bd!<CR>", { desc = "Discard Current Buffer" })
+map("i", "<C-s>", "<CMD>w<CR>", { desc = "Save Current Buffer" })
 
+-- Neovim terminal
 map("n", "<A-;>", "<CMD>terminal<CR>", { desc = "Open Terminal Buffer" })
 
 -- Netrw file explorer
 map("n", "<leader>d", "<CMD>Explore %:p:h<CR>", { desc = "Netrw (Buffer Directory)" })
 map("n", "<leader>D", "<CMD>Explore<CR>", { desc = "Netrw (cwd)" })
 
--- Buffer navigation
-map("n", "<Tab>", "<CMD>bnext<CR>", { desc = "Next Buffer" })
-map("n", "<S-Tab>", "<CMD>bprevious<CR>", { desc = "Previous Buffer" })
-map("n", "<leader><Tab>", "<CMD>e #<CR>", { desc = "Alternate Buffer" })
+-- Buffer navigation in normal mode
+map("n", "<Tab>", "<CMD>bnext<CR>", { desc = "Normal Mode: Next Buffer" })
+map("n", "<S-Tab>", "<CMD>bprevious<CR>", { desc = "Normal Mode: Previous Buffer" })
+map("n", "<leader><Tab>", "<CMD>e #<CR>", { desc = "Normal Mode: Alternate Buffer" })
+
+-- Buffer navigation in insert mode
+map("i", "<C-Right>", "<CMD>bnext<CR>", { desc = "Insert Mode: Next Buffer" })
+map("i", "<C-Left>", "<CMD>bprevious<CR>", { desc = "Insert Mode: Previous Buffer" })
+map("i", "<C-Up>", "<CMD>e #<CR>", { desc = "Insert Mode: Alternate Buffer" })
+
 
 -- Creating % closing splits
 map("n", "<leader>ss", "<CMD>split<CR>", { desc = "Horizontal Split" })
