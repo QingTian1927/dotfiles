@@ -7,7 +7,7 @@ vim.g.maplocalleader = "\\"
 ----------------------- NEOVIM KEYMAPPING ------------------------
 
 map("n", "<leader>q", "<CMD>bd!<CR>", { desc = "Discard Current Buffer" })
-map("i", "<C-s>", "<CMD>w<CR>", { desc = "Save Current Buffer" })
+map("n", "<C-s>", "<CMD>w<CR>", { desc = "Save Current Buffer" })
 
 -- Neovim terminal
 map("n", "<A-;>", "<CMD>terminal<CR>", { desc = "Open Terminal Buffer" })
