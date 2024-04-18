@@ -41,5 +41,5 @@ end, { expr = true, desc = "Insert Unordered List in Normal Mode"} )
 
 map("n", "<localleader>lo", function()
     return "i" .. snippets.enumerate() .. "<ESC>V3k=jA "
-end, { expr = true, desc = "Insert Unordered List in Normal Mode"} )
+end, { expr = true, desc = "Insert Ordered List in Normal Mode"} )
 
